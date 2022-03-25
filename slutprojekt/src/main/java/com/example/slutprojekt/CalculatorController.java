@@ -15,7 +15,7 @@ public class CalculatorController implements ErrorController{
 
 	//http://localhost:8080/calculator/?operation=addition&value1=1&value2=2
 	@CrossOrigin
-	@RequestMapping("/calculator/")
+	@RequestMapping("/calc/")
 	public String math(String operation, float value1, float value2) {
 		return cs.math(operation, value1, value2);
 	}    
