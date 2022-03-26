@@ -20,7 +20,7 @@ public class RPSController {
         return gameResult;
     }
 
-    @RequestMapping(value = "/RPS", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = { "/RPS", "/SSP" }, method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public String showScore() {
         String gameState = rps.getGameState();
         return gameState;
