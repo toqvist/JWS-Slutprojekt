@@ -1,6 +1,6 @@
 package com.example.slutprojekt;
 
-public class CalculatorService {
+public class CalcService {
     
     public String math(String operation, float value1, float value2) {
         System.out.println("doing math");

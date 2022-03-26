@@ -11,11 +11,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class CalculatorControllerTests {
+public class CalcControllerTests {
     
     @Test
     void testMath() {
-        CalculatorController controller = new CalculatorController();
+        CalcController controller = new CalcController();
         int value1 = 10;
         int value2 = 5;
         
@@ -34,7 +34,7 @@ public class CalculatorControllerTests {
 
     @Test
     void testFailMath() {
-        CalculatorController controller = new CalculatorController();
+        CalcController controller = new CalcController();
         int value1 = 10;
         int value2 = 5;
         
@@ -54,7 +54,7 @@ public class CalculatorControllerTests {
     @Test
     public void endpointTest() throws IOException {
 		
-        URL url = new URL("http://localhost:8080/math/?operation=addition&value1=1&value2=2");
+        URL url = new URL("http://localhost:8080/calc?operation=addition&value1=1&value2=2");
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
 		connection.setRequestMethod("GET");

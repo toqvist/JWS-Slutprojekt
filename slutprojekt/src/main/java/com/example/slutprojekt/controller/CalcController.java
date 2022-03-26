@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.boot.web.servlet.error.ErrorController;
 
 @RestController
-public class CalculatorController implements ErrorController{
+public class CalcController implements ErrorController{
     
-	private CalculatorService cs = new CalculatorService();
+	private CalcService cs = new CalcService();
 
-	//http://localhost:8080/calculator/?operation=addition&value1=1&value2=2
+	//http://localhost:8080/calc/?operation=addition&value1=1&value2=2
 	@CrossOrigin
 	@RequestMapping("/calc/")
 	public String math(String operation, float value1, float value2) {
@@ -27,7 +27,7 @@ public class CalculatorController implements ErrorController{
 		htmlString += "<html lang=\"en\">";
 		htmlString += "<head><meta charset=\"UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Page not found</title></head>";
 		htmlString += "<body><h1>Page does not exist</h1><h2>Valid endpoints:</h2><ul>";
-		htmlString += "<li>/Calculator - accepts parameters OPERATION, value1 and value2</li></ul></body>";
+		htmlString += "<li>/Calc - accepts parameters OPERATION, value1 and value2</li></ul></body>";
 		htmlString += "</html>";
 		return htmlString;
 	}
