@@ -66,4 +66,9 @@ public class RPSService {
         }
         return returnString;
     }
+
+    public String getGameState() {
+        String gameState = rpsBean.getGameState();
+        return gameState;
+    }
 }

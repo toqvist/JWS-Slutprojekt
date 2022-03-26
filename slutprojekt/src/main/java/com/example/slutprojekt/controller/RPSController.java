@@ -1,19 +1,29 @@
 package com.example.slutprojekt.controller;
 
+import com.example.slutprojekt.model.RPSBean;
 import com.example.slutprojekt.model.RPSService;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
 
 @RestController
 public class RPSController {
     
     RPSService rps = new RPSService();
 
-    @GetMapping("/RPS")
+    @RequestMapping(value = "/RPS", method = RequestMethod.POST)
     public String play(String choice) {
-        return rps.play(choice);
+        
+        String gameResult = rps.play(choice);
+        return gameResult;
+    }
 
+    @RequestMapping(value = "/RPS", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public String showScore() {
+        String gameState = rps.getGameState();
+        return gameState;
     }
 
 }

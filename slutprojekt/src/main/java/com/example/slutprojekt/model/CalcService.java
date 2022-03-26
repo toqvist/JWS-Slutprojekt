@@ -1,4 +1,4 @@
-package com.example.slutprojekt;
+package com.example.slutprojekt.model;
 
 public class CalcService {
     
