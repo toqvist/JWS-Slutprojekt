@@ -41,13 +41,8 @@ public class RPSService {
             break;
         }
         rpsBean.addGameRound();
-        //{ "Computer move": value, "Winner": value }  
         
-        //String gameState = "Player chose " + playerChoice + "   AI chose " + opponentChoice + "   " + result + "   Wins:" + rpsBean.getWins() + "   Losses: " + rpsBean.getLosses();
-
         String gameState = "{\"Computer move\":\"" + opponentChoice  + "\",\"Winner\":\"" + result +"\"}";
-
-        //String gameState = "Computer move: " + opponentChoice + "playerChoice: "
         return gameState;
     }
 
