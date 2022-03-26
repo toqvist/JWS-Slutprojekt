@@ -15,9 +15,9 @@ public class CalcService {
             case "multiplication":
                 result = value1*value2;
                 break;
-            case "division":
-                result = value1/value2;
-                break;
+            // case "division":
+            //     result = value1/value2;
+            //     break;
         }
         String returnValue = String.valueOf(result);
         return returnValue;
