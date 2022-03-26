@@ -4,7 +4,10 @@ import java.util.Random;
 
 public class RPSService {
     
-    public static String play(String choice) {
+    RPSBean rpsBean = new RPSBean(); 
+
+    public String play(String choice) {
+
         String result = "";
         
         String playerChoice = choice;
@@ -28,21 +31,21 @@ public class RPSService {
 
         switch(result) {
         case "Player won!":
-            RPSBean.addWin();
+            rpsBean.addWin();
             break;
         case "Player lost!":
-            RPSBean.addLoss();
+            rpsBean.addLoss();
             break;
         case "Draw!":
-            RPSBean.addTie();
+            rpsBean.addTie();
             break;
         }
-        RPSBean.addGameRound();
-        String gameState = "Player chose " + playerChoice + "   AI chose " + opponentChoice + "   " + result + "   Wins:" + RPSBean.getWins() + "   Losses: " + RPSBean.getLosses();
+        rpsBean.addGameRound();
+        String gameState = "Player chose " + playerChoice + "   AI chose " + opponentChoice + "   " + result + "   Wins:" + rpsBean.getWins() + "   Losses: " + rpsBean.getLosses();
         return gameState;
     }
 
-    private static String generateOpponentChoice() {
+    private String generateOpponentChoice() {
 
         Random random = new Random();
         int randomNumber = random.nextInt(3);
