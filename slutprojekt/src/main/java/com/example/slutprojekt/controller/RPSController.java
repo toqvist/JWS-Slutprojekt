@@ -13,7 +13,7 @@ public class RPSController {
     
     RPSService rps = new RPSService();
 
-    @RequestMapping(value = "/RPS", method = RequestMethod.POST)
+    @RequestMapping(value = "/RPS", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public String play(String choice) {
         
         String gameResult = rps.play(choice);

@@ -15,33 +15,39 @@ public class RPSService {
 
         if (playerChoice.equals(opponentChoice)) {
             
-            result = "Draw!";
+            result = "draw";
         
         } else if ((playerChoice.equals("rock") && opponentChoice.equals("paper") ) ||
                 (playerChoice.equals("scissors") && opponentChoice.equals("rock") ) ||
                 (playerChoice.equals("paper") && opponentChoice.equals("scissors") ) ) {
 
-            result = "Player lost!";
+            result = "computer";
             System.out.println("player lost");
 
         } else {
-            result = "Player won!";
+            result = "player";
             System.out.println("player won");
         }
 
         switch(result) {
-        case "Player won!":
+        case "player":
             rpsBean.addWin();
             break;
-        case "Player lost!":
+        case "computer":
             rpsBean.addLoss();
             break;
-        case "Draw!":
+        case "draw":
             rpsBean.addTie();
             break;
         }
         rpsBean.addGameRound();
-        String gameState = "Player chose " + playerChoice + "   AI chose " + opponentChoice + "   " + result + "   Wins:" + rpsBean.getWins() + "   Losses: " + rpsBean.getLosses();
+        //{ "Computer move": value, "Winner": value }  
+        
+        //String gameState = "Player chose " + playerChoice + "   AI chose " + opponentChoice + "   " + result + "   Wins:" + rpsBean.getWins() + "   Losses: " + rpsBean.getLosses();
+
+        String gameState = "{\"Computer move\":\"" + opponentChoice  + "\",\"Winner\":\"" + result +"\"}";
+
+        //String gameState = "Computer move: " + opponentChoice + "playerChoice: "
         return gameState;
     }
 
