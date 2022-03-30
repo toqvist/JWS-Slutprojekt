@@ -19,8 +19,8 @@ public class CalcService {
             //     result = value1/value2;
             //     break;
         }
-        String returnValue = String.valueOf(result);
-        return returnValue;
+        String resultJSON = "{\"result\":\"" + result + "\"}";
+        return resultJSON;
     }    
 
     private static final String PATH = "/error";

@@ -18,7 +18,7 @@ public class RandomImage {
     
     @RequestMapping(value = "/img", method = RequestMethod.GET, produces = MediaType.IMAGE_GIF_VALUE)
 	public void getImage(HttpServletResponse response) throws IOException {
-		
+		//Request url
 		RandomImageService ris = new RandomImageService();
 		var imgFile = ris.getRandomImg();
 

@@ -15,15 +15,17 @@ public class CalcController implements ErrorController{
     
 	private CalcService cs = new CalcService();
 
+	//Calc
 	//http://localhost:8080/calc/?operation=addition&value1=1&value2=2
 	@CrossOrigin
-	@RequestMapping("/calc/")
+	@RequestMapping(value="/calc/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String math(String operation, float value1, float value2) {
 		return cs.math(operation, value1, value2);
 	}    
 
 	@RequestMapping(value = "/error", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
 	public String errorPage() {
+		
 		String htmlString = "";
 		htmlString += "<!DOCTYPE html>";
 		htmlString += "<html lang=\"en\">";
@@ -32,6 +34,8 @@ public class CalcController implements ErrorController{
 		htmlString += "<li>/Calc - accepts parameters OPERATION, value1 and value2</li></ul></body>";
 		htmlString += "</html>";
 		return htmlString;
+		//if /img /CSV or calc
+		//otherwise general docs
 	}
 
 }

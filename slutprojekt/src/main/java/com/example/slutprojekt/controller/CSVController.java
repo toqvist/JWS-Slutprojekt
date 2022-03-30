@@ -14,6 +14,9 @@ import org.springframework.http.MediaType;
 public class CSVController {
     
 //localhost:8080/readCSV?fileName=sample.csv
+//Läs CSV och lägg in i bean
+//Läs från bean och skriv till JSON
+//Output JSON
 
     @RequestMapping(value = "/readCSV", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public String readCSV(String fileName) throws FileNotFoundException, IOException {
