@@ -10,29 +10,47 @@
     <h1>Welcome to the API!</h1>
     <h2>Valid endpoints:</h2>
     
-    <h3>Calculator</h3>
-    <strong>Performs simple mathematical operations on two values</strong>
-    <p>/calc - accepts parameters , value1 and value2</p>
-    <p>Supported operations: addition, subtraction, multiplication</p>
-    <a href="/calc?operation=addition&value1=1&value2=2">Example request</a>
+    <section>
+        <h3>Calculator</h3>
+        <h4>Performs simple mathematical operations on two values</h4>
+        
+        <p><a href="/calc">/calc</a></p>
+
+        <strong>GET</strong>
+        <p>Parameters: operation, value1, value2</p>
+        <p>Supported operations: addition, subtraction, multiplication</p>
+        <p>Example request: <a href="calc/?operation=addition&value1=1&value2=2">/calc?operation=addition&value1=1&value2=2</a></p>
+        
+    </section>
+
+
+    <section>
+        <h3>Rock-Paper-Scissors</h3>
+        <h4>Play rock paper scissors!</h4>
+        <p><a href="/RPS">/RPS</a> or <a href="/SSP">/SSP</a></p>
+        <strong>POST</strong>
+        <p>Parameters: 'rock' or 'scissors' or 'paper'</p>
+        
+        <strong>GET</strong>
+        <p>No parameters</p>
+        <a href="/RPS">/RPS</a>
+    </section>
     
 
-    <h3>Rock-Paper-Scissors</h3>
-    <strong>Play rock paper scissors!</strong>
-    <p><a href="/RPS">/RPS</a> or <a href="/SSP">/SSP</a></p>
-    <p>Parameters: 'rock', 'scissors', 'paper</p>
-    <a href="/RPS?choice=rock"></a>
-    
-
-    <h3>CSV as JSON</h3>
-    <strong>Returns a csv file as a JSON</strong>
-    <p><a href="/readCSV">/readCSV</a></p>
-    <p>No parameters</p>
+    <section>
+        <h3>CSV as JSON</h3>
+        <h4>Returns a csv file as a JSON</h4>
+        <p><a href="/readCSV">/readCSV</a></p>
+        <strong>GET</strong>
+        <p>No parameters</p>
+    </section>
 
     <h3>Random Image</h3>
-    <strong>Returns a random image</strong>
+    <h4>Returns a random image</h4>
     <p><a href="/img">/img</a></p>
+    <strong>GET</strong>
     <p>No parameters</p>
+    
     
 </body>
 </html>
