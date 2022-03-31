@@ -23,19 +23,19 @@ public class CalcControllerTests {
 		
 		String query = BASEURL + subDomain + operation + "&value1=" + value1 + "&value2=" + value2;
 		String actual = HttpHelper.UrlResponse(query, "get", null);
-		assertEquals(actual, expected);
+		assertEquals(expected,actual);
 
 		operation = "?operation=subtraction";
 		expected = "{\"result\":\"5.0\"}";
 		query = BASEURL + subDomain + operation + "&value1=" + value1 + "&value2=" + value2;
 		actual = HttpHelper.UrlResponse(query, "get", null);
-		assertEquals(actual, expected);
+		assertEquals(expected,actual);
 
 		operation = "?operation=multiplication";
 		expected = "{\"result\":\"50.0\"}";
 		query = BASEURL + subDomain + operation + "&value1=" + value1 + "&value2=" + value2;
 		actual = HttpHelper.UrlResponse(query, "get", null);
-		assertEquals(actual, expected);
+		assertEquals(expected,actual);
 	}
 
     

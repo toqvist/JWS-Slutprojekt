@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 
-import com.example.slutprojekt.model.CSVService;
-
 import org.junit.Test;
 import com.example.HttpHelper;
 

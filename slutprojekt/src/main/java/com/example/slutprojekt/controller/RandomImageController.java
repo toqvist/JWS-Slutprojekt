@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @RestController
-public class RandomImage {
+public class RandomImageController {
     
     @RequestMapping(value = "/img", method = RequestMethod.GET, produces = MediaType.IMAGE_GIF_VALUE)
 	public void getImage(HttpServletResponse response) throws IOException {
