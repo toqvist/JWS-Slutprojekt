@@ -19,8 +19,8 @@ public class CSVController {
 //Output JSON
 
     @RequestMapping(value = "/readCSV", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public String readCSV(String fileName) throws FileNotFoundException, IOException {
-        
+    public String readCSV() throws FileNotFoundException, IOException {
+        String fileName ="sample.csv";
         CSVService csvs = new CSVService();
 
         return csvs.readFile(fileName);

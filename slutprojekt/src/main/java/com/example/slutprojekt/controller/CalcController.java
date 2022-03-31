@@ -20,7 +20,5 @@ public class CalcController{
 	@RequestMapping(value="/calc/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String math(String operation, float value1, float value2) {
 		return cs.math(operation, value1, value2);
-	}    
-
-
+	}
 }
