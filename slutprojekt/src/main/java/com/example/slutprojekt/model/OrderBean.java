@@ -1,7 +1,6 @@
 package com.example.slutprojekt.model;
 
 public class OrderBean {
-    //OrderDate,Region,Rep1,Rep2,Item,Units,UnitCost,Total
     String OrderDate = "";
     String Region = "";
     String Rep1 = "";

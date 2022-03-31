@@ -1,8 +1,6 @@
 package com.example.slutprojekt.controller;
 
-import com.example.slutprojekt.model.RPSBean;
 import com.example.slutprojekt.model.RPSService;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
