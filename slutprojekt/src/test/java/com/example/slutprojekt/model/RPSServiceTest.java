@@ -1,5 +1,6 @@
 package com.example.slutprojekt.model;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
@@ -15,6 +16,10 @@ public class RPSServiceTest {
 
     @Test
     public void testPlay() {
-
+        RPSService rps = new RPSService();
+        String parameter ="rock";
+        String expected = "{\"Computer move\":";
+        String actual = rps.play(parameter);
+        assertTrue(actual.contains(expected));
     }
 }
