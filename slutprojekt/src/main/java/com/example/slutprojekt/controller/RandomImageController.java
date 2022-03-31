@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RestController
 public class RandomImageController {
     
-    @RequestMapping(value = "/img", method = RequestMethod.GET, produces = MediaType.IMAGE_GIF_VALUE)
+    @RequestMapping(value = "/img", method = RequestMethod.GET, produces = MediaType.IMAGE_JPEG_VALUE)
 	public void getImage(HttpServletResponse response) throws IOException {
 		//Request url
 		RandomImageService ris = new RandomImageService();
 		var imgFile = ris.getRandomImg();
 
-		response.setContentType(MediaType.IMAGE_GIF_VALUE);
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
 		StreamUtils.copy(imgFile.getInputStream(), response.getOutputStream());
 	}
 }
