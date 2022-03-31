@@ -10,10 +10,6 @@ public class OrderBean {
     String Units = "";
     String UnitCost = "";
     String Total = "";
-    
-    public OrderBean() {
-        
-    }
 
     public String getOrderDate() {
         return OrderDate;
@@ -79,5 +75,4 @@ public class OrderBean {
         Total = total;
     }
 
-    
 }
